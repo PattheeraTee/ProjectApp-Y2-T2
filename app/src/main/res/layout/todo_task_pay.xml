@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+
+    android:id="@+id/card_view_selectAll"
+
+    android:layout_marginEnd="20dp"
+    android:layout_marginStart="20dp"
+    android:layout_marginTop="5dp"
+    android:padding="5dp"
+    android:paddingStart="0dp"
+    android:layout_marginBottom="5dp"
+    android:orientation="horizontal"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.2"
+        android:orientation="vertical">
+        <!-- ส่วนของเนื้อหาของ LinearLayout ที่เป็นแนวนอนที่ 1 -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".MainActivity">
+
+            <!-- Circular Image View  -->
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_imagestep3"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/flower01" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:orientation="vertical">
+        <!-- ส่วนของเนื้อหาของ LinearLayout ที่เป็นแนวนอนที่ 2 -->
+        <TextView
+            android:id="@+id/task_titlestep3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            tools:text="Buy Some Apples" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.2"
+        android:orientation="vertical">
+        <!-- ส่วนของเนื้อหาของ LinearLayout ที่เป็นแนวนอนที่ 1 -->
+
+        <TextView
+            android:id="@+id/memberpay_step3"
+            android:layout_width="wrap_content"
+            android:text="20"
+            android:layout_gravity="end"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+</LinearLayout>

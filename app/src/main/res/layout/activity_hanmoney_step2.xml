@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    tools:context=".Hanmoney_step2">
+    <!--        android:layout_height="?actionBarSize"-->
+    <LinearLayout
+        android:id="@+id/navbarstep2"
+        android:layout_width="match_parent"
+
+    android:layout_height="100dp"
+        android:background="@color/skyblue"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@+id/navbarstep2back"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:contentDescription="back"
+            android:src="@drawable/arrowback"
+            app:tint="@color/white"/>
+        <EditText
+            android:id="@+id/navbarstep2edt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:textColor="@color/white"
+            android:color="@color/white"
+            android:inputType="text"
+            android:maxLines="1"
+            />
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:contentDescription="photo of logo"
+            android:src="@drawable/baseline_photo_24"
+            />
+
+
+    </LinearLayout>
+    <!--        android:background="@color/black"-->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        app:layout_constraintTop_toBottomOf="@+id/navbarstep2"
+
+       >
+    <LinearLayout
+        android:id="@+id/datastep2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:gravity="center_vertical"
+
+        >
+
+
+        <LinearLayout
+            android:id="@+id/datestep2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:paddingBottom="0dp"
+            android:gravity="center_vertical"
+            app:layout_constraintTop_toBottomOf="@+id/navbarstep2">
+
+            <TextView
+                android:layout_marginStart="10dp"
+                android:id="@+id/step2date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="วัน/เดือน/ปี"
+                android:layout_weight="1"
+
+                />
+            <TextView
+                android:id="@+id/step2datecurent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+            android:text="dd/mm/yyyy่"
+
+            />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/calall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:gravity="center_vertical"
+            app:layout_constraintTop_toBottomOf="@+id/datestep2">
+
+            <TextView
+                android:layout_marginStart="10dp"
+                android:id="@+id/step2all"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="ยอดรวมทั้งหมด"
+                android:layout_weight="1"
+
+                />
+            <TextView
+                android:id="@+id/step2calall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="0 ฿"
+
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/peoplepay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:gravity="center_vertical"
+            app:layout_constraintTop_toBottomOf="@+id/calall"
+            >
+
+            <TextView
+                android:layout_marginStart="10dp"
+                android:id="@+id/step2peoplepay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="คนออกเงิน"
+                android:layout_weight="1"
+
+                />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleviewstep2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@+id/datastep2"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"/>
+        <LinearLayout
+            android:id="@+id/selecthan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:gravity="center_vertical"
+            app:layout_constraintTop_toBottomOf="@+id/datestep2">
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RadioButton
+                    android:id="@+id/hanequl_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="หารเท่ากันทุกคน" />
+
+                <RadioButton
+                    android:id="@+id/hanunequl_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="หารไม่เท่ากัน" />
+            </RadioGroup>
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/hanrecycleviewstep2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@+id/datastep2"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"/>
+
+        <LinearLayout
+
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            >
+
+            <Button
+                android:id="@+id/step2btnback"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_weight="0.3"
+                android:background="@drawable/buttonbackforstep2"
+                android:text="ย้อนกลับ"
+                android:textColor="@color/skyblue"
+                android:textSize="15sp"
+                app:cornerRadius="8dp" />
+
+            <Button
+                android:id="@+id/step2btnconfirm"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="0.7"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/buttonconfirmforstep2"
+                android:text="ยืนยัน"
+
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

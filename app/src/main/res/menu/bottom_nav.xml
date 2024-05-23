@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/home"
+        android:icon="@drawable/baseline_home_24"
+
+        android:title="หน้าหลัก" />
+    <item
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pay_bill"
+        android:icon="@drawable/baseline_receipt_24"
+        android:title="บิลต้องจ่าย" />
+    <item
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/notification"
+        android:icon="@drawable/baseline_notifications_24"
+        android:title="แจ้งเตือน" />
+    <item
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/other"
+        android:icon="@drawable/baseline_menu_24"
+        android:title="อื่นๆ" />
+</menu>
